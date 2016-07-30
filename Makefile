@@ -1,7 +1,7 @@
 all: hl
 
-kilo: hl.c
-	$(CC) -o hl hl.c -Wall -W -pedantic -std=c11
+hl: hl.c
+	$(CC) -o hl hl.c -Wall -W -pedantic -std=c11 -g
 
 clean:
 	rm hl
