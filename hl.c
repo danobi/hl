@@ -125,7 +125,7 @@ void read_parse_loop(int fd, uint8_t* pattern)
 
             // read into buf
             if ((bytes_read = read(fd, buf + next_empty_idx, cur_buf_size - next_empty_idx - 1)) <= 0
-                    && (buf_in_use) <= 0)
+                    && (buf_in_use <= 0))
                 exit_success();
 
             buf_in_use += bytes_read;
