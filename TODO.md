@@ -1,0 +1,4 @@
+- [ ] Add pattern matching color highlighting
+- [ ] Correctly parse cmd line flags
+    - [ ] Include `-h` flag
+- [ ] Downsize internal buffer when possible
