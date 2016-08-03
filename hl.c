@@ -11,17 +11,18 @@
 #define INIT_BUF_SIZE 1024
 
 // forward declares
-void process_args(int argc, char** argv);
-void exit_success();
+void    process_args(int argc, char** argv);
+void    exit_success();
 int32_t exists_newline(uint8_t* buf);
-void read_parse_loop(int fd, uint8_t* pattern);
-void parse_highlight_print(uint8_t* buf, uint8_t* pattern, uint8_t n);
+void    read_parse_loop(int fd, uint8_t* pattern);
+void    parse_highlight_print(uint8_t* buf, uint8_t* pattern, uint8_t n);
 
 
 // flags
-bool f_from_stdin = false;     // true if getting stream from stdin
-bool f_from_file = false;      // true if getting stream from file
-char* o_filename = NULL;       // name of file
+bool  f_from_stdin = false;     // true if getting stream from stdin
+bool  f_from_file = false;      // true if getting stream from file
+char* o_filename = NULL;        // name of file
+
 
 void process_args(int argc, char** argv)
 {
@@ -34,6 +35,7 @@ void process_args(int argc, char** argv)
     }
     // TODO: provide -h flag and use optparse
 }
+
 
 /*
  * Terminates this progoram after a successful execution
@@ -53,11 +55,11 @@ void exit_success()
  */
 int32_t exists_newline(uint8_t* buf)
 {
-    uint8_t* buf_start = buf;
 
     if (buf == NULL)
         return -1;
 
+    uint8_t* buf_start = buf;
     while (*buf) {
         if (*buf == '\n')
             return (buf - buf_start);
