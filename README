@@ -1,5 +1,3 @@
-hl
-======
 hl: a text stream highlighter.
 
 USAGE: hl -r <regex> [options] [file]
