@@ -1,7 +1,7 @@
 all: hl
 
-hl: hl.c
-	$(CC) -o hl hl.c -Wall -W -pedantic -std=c11 -g
+hl: hl.cc
+	$(CXX) -o hl hl.cc -Wall -W -pedantic -std=c++11 -g
 
 clean:
 	rm hl
