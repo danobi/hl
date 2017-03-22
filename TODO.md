@@ -1,3 +1,0 @@
-- [x] Add pattern matching color highlighting
-- [x] Correctly parse cmd line flags
-    - [x] Include `-h` flag
